@@ -1,5 +1,7 @@
 # 테스트 주도 개발(Test Driven Development)
 
+![test-driven-development](assets/test-driven-development.png)
+
 ## 유닛 테스트(Unit Test)
 
 유닛 테스트란 컴퓨터 프로프그래밍에서 소스코드의 특정 모듈이 의도된 대로 정확히 작동하는지 검증하는 절차입니다. 즉 모든 함수와 메서드에 대한 테스트 케이스를 작성하는 절차를 말합니다.
