@@ -44,7 +44,9 @@ XCTAssertTrue(output[0] > output[1])
 XCTAssertTrue(solution.isSameScore(output))
 ```
 
+### 네트워크에 강하게 의존하고 있을 때, F.I.R.S.T. 원칙 중 Repeatable 원칙을 지키는 테스트를 작성하기 위해서는?
 
+네트워크나 여러 사이트 이펙트에 강하게 커플링이 되어있는 객체를 가지고 테스트를 할 때, 외부에서 가짜 데이터를 제공하는 어떤 스텁이나 목객체를 넣고 동작을 테스트를 하는 것이 테스트 기법 중 하나입니다.
 
 ### 참고 링크
 
@@ -53,3 +55,5 @@ XCTAssertTrue(solution.isSameScore(output))
 > [테스트 주도 개발](https://book.naver.com/bookdb/book_detail.nhn?bid=7443642)
 >
 > [Clean Code](https://book.naver.com/bookdb/book_detail.nhn?bid=7390287)
+>
+> [Let's TDD - 전수열](https://www.youtube.com/watch?v=meTnd09Pf_M)
