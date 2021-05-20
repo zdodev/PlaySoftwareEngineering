@@ -29,7 +29,7 @@
 
 ### SUT(System Under Test)
 
-테스트 대상 시스템, 즉 테스를 하려는 대상을 칭합니다.
+테스트 대상 시스템, 즉 테스트를 하려는 대상을 칭합니다.
 
 - Fake Object
 - Dummy Object
