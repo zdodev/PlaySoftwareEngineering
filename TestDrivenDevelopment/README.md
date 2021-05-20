@@ -1,4 +1,8 @@
-# 테스트 주도 개발
+# 테스트 주도 개발(Test Driven Development)
+
+## 유닛 테스트(Unit Test)
+
+유닛 테스트란 컴퓨터 프로프그래밍에서 소스코드의 특정 모듈이 의도된 대로 정확히 작동하는지 검증하는 절차입니다. 즉 모든 함수아ㅗ 메서드에 대한 테스트 케이스를 작성하는 절차를 말합니다.
 
 ## TDD의 세 가지 원칙
 
@@ -20,6 +24,26 @@
 - Repeatable, 반복 가능하게: 테스트는 어떤 환경에서도 반복 가능해야 합니다. 실제 환경, QA 환경, 네트워크가 연결되지 않은 컴퓨터에서도 실행할 수 있어야 합니다.
 - Self-Validating, 자가검증하는: 테스트는 bool 값으로 결과를 내야 합니다.
 - Timely, 적시에: 테스트는 적시에 작성해야 합니다. 테스트를 먼저 작성하고 실제 코드를 구현해야 합니다.
+
+### SUT(System Under Test)
+
+테스트 대상 시스템, 즉 테스를 하려는 대상을 칭합니다.
+
+- Fake Object
+- Dummy Object
+- Mock Object
+- Temporary Test Stub
+- Test Stub
+- Test Spy
+
+### 유닛 테스트 스타일
+
+- Given -> When -> Then
+    - Given은 테스트 시나리오에서 수행할 동작을 시작하기 전에 상태를 말합니다. 테스트의 사전 조건으로 볼 수 있습니다.
+    - When은 테스트 수행할 동작을 말합니다.
+    - Then은 수행한 동작으로 인해 예상되는 변경을 말합니다. 테스트가 예상한 대로 동작하는지 확인합니다.
+- Arrange -> Act -> Assert
+- Setup -> Exercies -> Verify
 
 ### 테스트 메서드명 작성 기준
 
@@ -56,4 +80,10 @@ XCTAssertTrue(solution.isSameScore(output))
 >
 > [Clean Code](https://book.naver.com/bookdb/book_detail.nhn?bid=7390287)
 >
-> [Let's TDD - 전수열](https://www.youtube.com/watch?v=meTnd09Pf_M)
+> [Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
+>
+> [Martin Fowler GivenWhenThen](https://martinfowler.com/bliki/GivenWhenThen.html)
+>
+> [xUnit Patterns Four-Phase Test](http://xunitpatterns.com/Four%20Phase%20Test.html)
+>
+> [YouTube Let's TDD - 전수열](https://www.youtube.com/watch?v=meTnd09Pf_M)
