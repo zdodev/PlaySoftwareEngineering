@@ -6,6 +6,10 @@
 
 - MVC 패턴에 대한 기록입니다.
 
+## MVVM(Model-View-ViewModel)
+
+- MVVM 패턴에 대한 기록입니다.
+
 ---
 
 > [wiki 소프트웨어 디자인 패턴](https://ko.wikipedia.org/wiki/소프트웨어_디자인_패턴)
