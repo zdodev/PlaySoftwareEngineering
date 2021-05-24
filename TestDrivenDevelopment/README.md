@@ -51,13 +51,6 @@ func letsTDD() {
 
 테스트 대상 시스템, 즉 테스트를 하려는 대상을 칭합니다.
 
-- Fake Object
-- Dummy Object
-- Mock Object
-- Temporary Test Stub
-- Test Stub
-- Test Spy
-
 ### 유닛 테스트 스타일
 
 - Given -> When -> Then
@@ -94,6 +87,32 @@ XCTAssertTrue(solution.isSameScore(output))
 
 네트워크나 여러 사이트 이펙트에 강하게 커플링이 되어있는 객체를 가지고 테스트를 할 때, 외부에서 가짜 데이터를 제공하는 어떤 스텁이나 목객체를 넣고 동작을 테스트하는 것이 테스트 기법의 하나입니다.
 
+## Mock에 대한 기본적인 분류, 테스트 더블(Test Double)
+
+### 더미 객체(Dummy Object)
+
+더미 객체는 말 그대로 모조품, 단순한 껍데기에 해당합니다. 단지 인스턴스화된 객체가 필요할 뿐 해당 객체의 기능까지는 필요하지 않은 경우에 사용합니다.
+
+### 테스트 스텁(Test Stub)
+
+테스트 스텁은 더미 객체보다 더 발전한 형태입니다. 테스트 스텁은 더미 객체가 마치 실제로 동작하는 것처럼 보이게 구현한 객체입니다. 객체의 특정 상태를 가정해서 만든 구현체라고 볼 수 있습니다. 테스트에 필요한 부분만 하드코딩하여 기능을 제공합니다.
+
+### 페이크 객체(Fake Object)
+
+페이크 객체는 여러 개의 인스턴스를 대표할 수 있는 경우이거나, 좀 더 복잡한 구현이 들어가 있는 객체를 말합니다. 복잡한 로직이나 객체 내부에서 필요로 하는 다른 외부 객체들의 동작을, 비교적 단순화하여 구현한 객체입니다.
+
+### 테스트 스파이(Test Spy)
+
+테스트에 사용되는 객체에 대해서도, 특정 객체가 사용됐는지, 그리고 그 객체의 예상된 메서드가 정상적으로 호출됐는지를 확인해야 하는 상황이 발생합니다. 보통은 호출 여부를 몰래 감시해서 기록했다가, 나중에 요청이 들어오면 해당 기록 정보를 전달해줍니다. 그런 목적으로 만들어진 객체를 테스트 스파이라고 부릅니다.
+
+### Mock 객체(Mock Object)
+
+Mock 객체는 행위를 검증하기 위해 사용하는 객체입니다. 분류상 행위 기반 테스트를 위해 사용하는 객체로 분류되지만 현재는 더 일반적이고 넓은 의미의 '가상 임시 구현체'의 의미로 사용됩니다.
+
+### Mock 프레임워크
+
+Mock 프레임워크는 동적으로 Mock 객체를 만들어주는 프레임워크입니다. Mock 프레임워크의 장점은 Mock 객체를 직접 작성하지 않아도 되며, 행위까지도 테스트 케이스에 포함시킬 수 있습니다.
+
 ## BankBusiness
 
 은행 계좌 개설을 TDD로 구현한 기록입니다.
@@ -102,14 +121,25 @@ XCTAssertTrue(solution.isSameScore(output))
 
 ---
 
-> [테스트 주도 개발](https://book.naver.com/bookdb/book_detail.nhn?bid=7443642)
+> [도서: 테스트 주도 개발](https://book.naver.com/bookdb/book_detail.nhn?bid=7443642)
 >
-> [Clean Code](https://book.naver.com/bookdb/book_detail.nhn?bid=7390287)
+> [도서: Clean Code](https://book.naver.com/bookdb/book_detail.nhn?bid=7390287)
 >
-> [Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
+> [도서: 테스트 주도 개발 TDD 실천법과 도구](https://book.naver.com/bookdb/book_detail.nhn?bid=6291557)
+>
+> [Wiki Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
 >
 > [Martin Fowler GivenWhenThen](https://martinfowler.com/bliki/GivenWhenThen.html)
 >
 > [xUnit Patterns Four-Phase Test](http://xunitpatterns.com/Four%20Phase%20Test.html)
 >
+> [Swift by Sundell Unit Testing](https://www.swiftbysundell.com/discover/unit-testing/)
+>
+> [GitHub Cuckoo - Swift mocking framework](https://github.com/Brightify/Cuckoo)
+>
+> [GitHub Mockingbird - Swift mocking framework](https://github.com/birdrides/mockingbird/)
+>
+> [GihHub SwiftMock - Swift mocking framework](https://github.com/mflint/SwiftMock)
+>
 > [YouTube Let's TDD - 전수열](https://www.youtube.com/watch?v=meTnd09Pf_M)
+
