@@ -1,0 +1,66 @@
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+
+
+class "Invitation" as Invitation << (S, SkyBlue) struct >> { 
+  -when : String 
+}
+class "Ticket" as Ticket << (S, SkyBlue) struct >> { 
+  -fee : Int
+  ~getFee() 
+}
+class "Bag" as Bag { 
+  -amount : Int
+  -invitation : Invitation?
+  -ticket : Ticket?
+  ~init(_:_:)
+  ~init(_:)
+  ~hasInvitation()
+  ~hasTicket()
+  ~setTicket(_:)
+  ~minusAmount(_:)
+  ~plusAmount(_:) 
+}
+class "Audience" as Audience << (S, SkyBlue) struct >> { 
+  -bag : Bag
+  ~init(_:)
+  ~getBag() 
+}
+class "TicketOffice" as TicketOffice { 
+  -amount : Int
+  -tickets
+  ~init(_:_:)
+  ~getTicket()
+  ~minusAmount(_:)
+  ~plusAmount(_:) 
+}
+class "TicketSeller" as TicketSeller << (S, SkyBlue) struct >> { 
+  -ticketOffice : TicketOffice
+  ~init(_:)
+  ~getTicketOffice() 
+}
+class "Theater" as Theater << (S, SkyBlue) struct >> { 
+  -ticketSeller : TicketSeller
+  ~init(_:)
+  ~enter(_:) 
+}
+
+Invitation <-- Bag
+Ticket <-- Bag
+
+Bag <-- Audience
+
+Ticket <-- TicketOffice
+
+TicketOffice <-- TicketSeller
+
+TicketSeller <-- Theater
+Audience <.. Theater
+Bag <.. Theater
+TicketOffice <.. Theater
+Ticket <.. Theater
+
+@enduml
