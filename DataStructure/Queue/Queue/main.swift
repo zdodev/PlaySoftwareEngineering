@@ -1,0 +1,5 @@
+var queue = Queue<Int>()
+queue.enqueue(1)
+queue.enqueue(3)
+queue.enqueue(5)
+print(queue)

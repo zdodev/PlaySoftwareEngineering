@@ -1,0 +1,10 @@
+var list = LinkedList<Int>()
+list.append(value: 3)
+list.append(value: 4)
+list.append(value: 5)
+list.append(value: 4)
+list.append(value: 5)
+
+print(list)
+list.remove(value: 4)
+print(list)
