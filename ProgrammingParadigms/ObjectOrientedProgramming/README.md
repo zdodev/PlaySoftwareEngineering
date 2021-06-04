@@ -70,6 +70,26 @@ print(coffee.price())
 print(coffee.price("latte"))
 ```
 
+## 객체지향 프로그래밍 설계 5원칙(feat. SOLID)
+
+### S, SRP(Single Responsibility Principle)
+
+### O, OCP(Open Closed Principle)
+
+### L, Liskov Substitution Principle
+
+### I, Interface Segregation Principle
+
+### D, Dependency Inversion Principle
+
+## 소프트웨어를 복잡하기 않게 설계하기
+
+### DRY
+
+### KISS
+
+### YAGNI
+
 ## TicketSales
 
 - 오브젝트 책의 티켓 판매 애플리케이션을 Swift로 구현해보았습니다.
