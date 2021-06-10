@@ -1,0 +1,34 @@
+@startuml
+
+class Customer {
+    order()
+}
+
+class MenuItem {
+    name
+    price
+}
+
+class Menu {
+    -items
+    MenuItem choose()
+}
+
+class Barista {
+    Coffee makeCoffee()
+}
+
+class Coffee {
+    -name
+    -price
+}
+
+Menu <.. Customer
+Barista <.. Customer
+
+MenuItem <-- Menu
+
+MenuItem <.. Barista
+Coffee <.. Barista
+
+@enduml
