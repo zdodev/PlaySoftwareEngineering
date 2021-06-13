@@ -1,18 +1,18 @@
 import Foundation
 
-class ViewModel {
+final class ViewModel {
     var dateTimeString = "Loading..." {
         didSet {
             onUpdated()
         }
     }
-    var onUpdated: () -> Void = {}
+    var onUpdated = {}
     
-    private var service = Service()
+    private let service = Service()
     
     func moveDay(day: Int) {
-        service.moveDay(day: day)
-        dateTimeString = dateToString(date: service.currentModel.currentDateTime)
+        let model = service.moveDay(day: day)
+        dateTimeString = dateToString(date: model.currentDateTime)
     }
     
     func reload() {

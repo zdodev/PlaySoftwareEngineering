@@ -47,13 +47,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		410FE1432675CB2100FEDA98 /* Entity */ = {
+		410FE1432675CB2100FEDA98 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				410FE1412675CA9900FEDA98 /* Entity.swift */,
 				410FE1472675D08500FEDA98 /* Model.swift */,
 			);
-			path = Entity;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		410FE1442675CB3100FEDA98 /* LifeCycle */ = {
@@ -63,6 +63,38 @@
 				41ED61052675014A007F43F8 /* SceneDelegate.swift */,
 			);
 			path = LifeCycle;
+			sourceTree = "<group>";
+		};
+		410FE14D26763EE500FEDA98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41ED61072675014A007F43F8 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		410FE14E26763EE800FEDA98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				410FE14B2675D1A000FEDA98 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		410FE14F26763F0900FEDA98 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				410FE1492675D0C400FEDA98 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		410FE15026763F0E00FEDA98 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				410FE1452675CD4A00FEDA98 /* Repository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		41ED60F72675014A007F43F8 = {
@@ -85,11 +117,11 @@
 			isa = PBXGroup;
 			children = (
 				410FE1442675CB3100FEDA98 /* LifeCycle */,
-				410FE1432675CB2100FEDA98 /* Entity */,
-				41ED61072675014A007F43F8 /* ViewController.swift */,
-				410FE14B2675D1A000FEDA98 /* ViewModel.swift */,
-				410FE1492675D0C400FEDA98 /* Service.swift */,
-				410FE1452675CD4A00FEDA98 /* Repository.swift */,
+				410FE1432675CB2100FEDA98 /* Model */,
+				410FE14D26763EE500FEDA98 /* View */,
+				410FE14E26763EE800FEDA98 /* ViewModel */,
+				410FE14F26763F0900FEDA98 /* Service */,
+				410FE15026763F0E00FEDA98 /* Repository */,
 				41ED61092675014A007F43F8 /* Main.storyboard */,
 				41ED610C26750156007F43F8 /* Assets.xcassets */,
 				41ED610E26750156007F43F8 /* LaunchScreen.storyboard */,
@@ -323,6 +355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XZH8K7PDP5;
 				INFOPLIST_FILE = "MVVM-2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,6 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XZH8K7PDP5;
 				INFOPLIST_FILE = "MVVM-2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

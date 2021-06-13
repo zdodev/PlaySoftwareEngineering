@@ -1,16 +1,16 @@
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     @IBOutlet weak var dateTimeLabel: UILabel!
     
-    private let viewModel = ViewModel()
+    private var viewModel: ViewModel! = ViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.onUpdated = { [weak self] in
+        viewModel.onUpdated = {
             DispatchQueue.main.async {
-                self?.dateTimeLabel.text = self?.viewModel.dateTimeString
+                self.dateTimeLabel.text = self.viewModel.dateTimeString
             }
         }
         viewModel.reload()
