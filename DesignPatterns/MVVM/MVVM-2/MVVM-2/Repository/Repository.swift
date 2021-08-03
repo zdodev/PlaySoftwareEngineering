@@ -2,7 +2,7 @@ import Foundation
 
 struct Repository {
     func fetchNow(onCompleted: @escaping (Entity) -> Void) {
-        let urlString = "http://zdoapi.duckdns.org/now"
+        let urlString = "http://worldclockapi.com/api/json/utc/now"
         
         guard let url = URL(string: urlString) else {
             return

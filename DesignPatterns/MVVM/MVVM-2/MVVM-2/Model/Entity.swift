@@ -1,3 +1,3 @@
 struct Entity: Decodable {
-    let now: String
+    let currentDateTime: String
 }

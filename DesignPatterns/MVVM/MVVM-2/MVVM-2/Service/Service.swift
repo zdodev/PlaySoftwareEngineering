@@ -8,8 +8,8 @@ final class Service {
         // Entity -> Model
         repository.fetchNow { entity in
             let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-            guard let now = formatter.date(from: entity.now) else {
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm'Z'"
+            guard let now = formatter.date(from: entity.currentDateTime) else {
                 return
             }
             
