@@ -129,6 +129,10 @@ Mock 프레임워크는 동적으로 Mock 객체를 만들어주는 프레임워
 >
 > [Wiki Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
 >
+> [Apple Testing Your Apps in Xcode](https://developer.apple.com/documentation/xcode/testing-your-apps-in-xcode)
+>
+> [Apple Unit Testing Apps and Frameworks Sample Code](https://developer.apple.com/library/archive/samplecode/UnitTests/Introduction/Intro.html#//apple_ref/doc/uid/DTS40011742)
+>
 > [Martin Fowler GivenWhenThen](https://martinfowler.com/bliki/GivenWhenThen.html)
 >
 > [xUnit Patterns Four-Phase Test](http://xunitpatterns.com/Four%20Phase%20Test.html)
