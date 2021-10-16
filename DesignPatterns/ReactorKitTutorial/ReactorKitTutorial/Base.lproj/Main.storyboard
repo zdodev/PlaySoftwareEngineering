@@ -51,7 +51,6 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="nRi-mS-HY2" id="8PC-hx-hjd"/>
-                        <outlet property="minusLabel" destination="76h-JW-cDe" id="fQF-N4-jOS"/>
                         <outlet property="numberLabel" destination="ZYj-IE-E4T" id="CXF-cn-IdU"/>
                         <outlet property="plusButton" destination="b9B-q4-fA2" id="Ile-Bt-tKg"/>
                     </connections>

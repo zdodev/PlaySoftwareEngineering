@@ -15,6 +15,7 @@
 		41E6CF86270E01B300955E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E6CF84270E01B300955E13 /* LaunchScreen.storyboard */; };
 		41E6CF8F270E027300955E13 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41E6CF8E270E027300955E13 /* ReactorKit */; };
 		41E6CF92270E028A00955E13 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 41E6CF91270E028A00955E13 /* RxCocoa */; };
+		41E7B4B5271A9CD5000C6D80 /* CounterViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E7B4B4271A9CD5000C6D80 /* CounterViewReactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		41E6CF82270E01B300955E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41E6CF85270E01B300955E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41E6CF87270E01B300955E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41E7B4B4271A9CD5000C6D80 /* CounterViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewReactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				41E6CF79270E01B100955E13 /* AppDelegate.swift */,
 				41E6CF7B270E01B100955E13 /* SceneDelegate.swift */,
 				41E6CF7D270E01B100955E13 /* ViewController.swift */,
+				41E7B4B4271A9CD5000C6D80 /* CounterViewReactor.swift */,
 				41E6CF7F270E01B100955E13 /* Main.storyboard */,
 				41E6CF82270E01B300955E13 /* Assets.xcassets */,
 				41E6CF84270E01B300955E13 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 			files = (
 				41E6CF7E270E01B100955E13 /* ViewController.swift in Sources */,
 				41E6CF7A270E01B100955E13 /* AppDelegate.swift in Sources */,
+				41E7B4B5271A9CD5000C6D80 /* CounterViewReactor.swift in Sources */,
 				41E6CF7C270E01B100955E13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
