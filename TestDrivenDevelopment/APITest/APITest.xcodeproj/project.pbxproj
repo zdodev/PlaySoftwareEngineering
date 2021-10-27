@@ -10,6 +10,7 @@
 		41E9DD4B2729A9B9002EDC50 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E9DD4A2729A9B9002EDC50 /* main.swift */; };
 		41E9DD582729A9CE002EDC50 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E9DD572729A9CE002EDC50 /* StringTests.swift */; };
 		41E9DD5C2729A9D3002EDC50 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E9DD4A2729A9B9002EDC50 /* main.swift */; };
+		41E9DD602729B218002EDC50 /* SetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E9DD5F2729B218002EDC50 /* SetTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		41E9DD4A2729A9B9002EDC50 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		41E9DD552729A9CE002EDC50 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41E9DD572729A9CE002EDC50 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		41E9DD5F2729B218002EDC50 /* SetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				41E9DD572729A9CE002EDC50 /* StringTests.swift */,
+				41E9DD5F2729B218002EDC50 /* SetTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41E9DD5C2729A9D3002EDC50 /* main.swift in Sources */,
+				41E9DD602729B218002EDC50 /* SetTests.swift in Sources */,
 				41E9DD582729A9CE002EDC50 /* StringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
