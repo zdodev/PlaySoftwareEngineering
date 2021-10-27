@@ -9,4 +9,15 @@ class StringTests: XCTestCase {
         let expectedValue: [Substring] = ["1", "2"]
         XCTAssertEqual(result, expectedValue)
     }
+    
+    func test_replacingOccurrences_string_withInput_string() {
+        let inputString = "(1,2)"
+        
+        let result = inputString
+            .replacingOccurrences(of: "(", with: "")
+            .replacingOccurrences(of: ")", with: "")
+        
+        let expectedValue = "1,2"
+        XCTAssertEqual(result, expectedValue)
+    }
 }
