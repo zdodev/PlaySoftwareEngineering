@@ -38,7 +38,7 @@
 > - amount를 private으로 만들기
 > - ~~Dollar 부작용?~~
 > - Money 반올림?
-> - ~~equals()~~
+> - **equals()**
 > - hashCode()
 > - Equal null
 > - Equal object
@@ -48,6 +48,18 @@
 - 해당 오퍼레이션을 간단히 구현했다.
 - 곧장 리팩토링하는 대신 테스트를 조금 더 했다.
 - 두 경우를 모두 수용할 수 있도록 리팯토링했다.(일반화)
+
+## Step 4 Privacy
+
+- $5 + 10CHF = $10(환율이 2:1일 경우)
+- ~~$5 x 2  = $10~~
+- **amount를 private으로 만들기**
+- ~~Dollar 부작용?~~
+- Money 반올림?
+- ~~equals()~~
+- hashCode()
+- Equal null
+- Equal object
 
 ---
 

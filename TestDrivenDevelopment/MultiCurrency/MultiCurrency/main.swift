@@ -1,5 +1,5 @@
 struct Dollar {
-    var amount = 0
+    private var amount = 0
     
     init(_ amount: Int) {
         self.amount = amount
