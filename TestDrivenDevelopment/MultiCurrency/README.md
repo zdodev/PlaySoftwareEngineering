@@ -51,15 +51,41 @@
 
 ## Step 4 Privacy
 
-- $5 + 10CHF = $10(환율이 2:1일 경우)
-- ~~$5 x 2  = $10~~
-- **amount를 private으로 만들기**
-- ~~Dollar 부작용?~~
-- Money 반올림?
-- ~~equals()~~
-- hashCode()
-- Equal null
-- Equal object
+> - $5 + 10CHF = $10(환율이 2:1일 경우)
+> - ~~$5 x 2  = $10~~
+> - **amount를 private으로 만들기**
+> - ~~Dollar 부작용?~~
+> - Money 반올림?
+> - ~~equals()~~
+> - hashCode()
+> - Equal null
+> - Equal object
+
+- 오직 테스트를 향상시키기 위해서만 개발된 기능을 사용했다.
+- 두 테스트가 동시에 실패하면 망한다는 점을 인식했다.
+- 위험 요소가 있음에도 계속 진행했다.
+- 테스트와 코드 사이의 결합도를 낮추기 위해, 테스트하는 객체의 새 기능을 사용했다.
+
+## Step 5 Franc-ly Speaking
+
+> - $5 + 10CHF = $10(환율이 2:1일 경우)
+> - ~~$5 x 2  = $10~~
+> - ~~amount를 private으로 만들기~~
+> - ~~Dollar 부작용?~~
+> - Money 반올림?
+> - ~~equals()~~
+> - hashCode()
+> - Equal null
+> - Equal object
+> - **5CHF X 2 = 10CHF**
+> - Dollar/Franc 중복
+> - 공용 equals
+> - 공용 times
+
+- 큰 테스트를 공략할 수 없다. 그래서 진전을 나타낼 수 있는 자그마한 테스트를 만들었다.
+- 뻔뻔스럽게도 중복을 만들고 조금 고쳐서 테스트를 작성했다.
+- 설상가상으로 모델 코드까지 도매금으로 복사하고 수정해서 테스트를 통과했다.
+- 중복이 사라지기 전에는 집에 가지 않겠다고 약속했다.
 
 ---
 

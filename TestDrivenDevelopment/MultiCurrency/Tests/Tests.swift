@@ -11,4 +11,10 @@ class Tests: XCTestCase {
         XCTAssertEqual(Dollar(5), Dollar(5))
         XCTAssertNotEqual(Dollar(5), Dollar(6))
     }
+    
+    func test_franc_multiplication() {
+        let five = Franc(5)
+        XCTAssertEqual(Franc(10), five.times(2))
+        XCTAssertEqual(Franc(15), five.times(3))
+    }
 }
