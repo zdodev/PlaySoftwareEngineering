@@ -163,11 +163,11 @@
 > - Equal null
 > - Equal object
 > - ~~5CHF X 2 = 10CHF~~
-> - **Dollar/Franc 중복**
+> - Dollar/Franc 중복
 > - ~~공용 equals~~
 > - 공용 times
 > - ~~Franc와 Dollar 비교하기~~
-> - 통화?
+> - **통화?**
 > - testFrancMultiplication 제거
 
 - 큰 설계 아이디어를 다루다가 조금 곤경에 빠졌다. 그래서 좀 전에 주목했던 더 작은 작업을 수행했다.
