@@ -107,5 +107,46 @@
 - 두 번째 클래스(Franc)도 Money의 하위 클래스로 만들었다.
 - 불필요한 구현을 제거하기 전에 두 equals() 구현을 일치시켰다.
 
+## Step 7 Apples and Oranges
+
+> - $5 + 10CHF = $10(환율이 2:1일 경우)
+> - ~~$5 x 2  = $10~~
+> - ~~amount를 private으로 만들기~~
+> - ~~Dollar 부작용?~~
+> - Money 반올림?
+> - ~~equals()~~
+> - hashCode()
+> - Equal null
+> - Equal object
+> - ~~5CHF X 2 = 10CHF~~
+> - Dollar/Franc 중복
+> - ~~공용 equals~~
+> - 공용 times
+> - **Franc와 Dollar 비교하기**
+
+- 우릴 괴롭히던 결함을 끄집어내서 테스트에 담아냈다.
+- 완벽하진 않지만 그럭저럭 봐줄 만한 방법 (getClass())으로 테스트를 통과하게 만들었다.
+- 더 많은 동기가 있기 전에는 더 많은 설계를 도입하지 않기로 했다.
+
+## Step 8 Makin' Objects
+
+> - $5 + 10CHF = $10(환율이 2:1일 경우)
+> - ~~$5 x 2  = $10~~
+> - ~~amount를 private으로 만들기~~
+> - ~~Dollar 부작용?~~
+> - Money 반올림?
+> - ~~equals()~~
+> - hashCode()
+> - Equal null
+> - Equal object
+> - ~~5CHF X 2 = 10CHF~~
+> - **Dollar/Franc 중복**
+> - ~~공용 equals~~
+> - 공용 times
+> - ~~Franc와 Dollar 비교하기~~
+> - 통화?
+
+
+
 ---
 

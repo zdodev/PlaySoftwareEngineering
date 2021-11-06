@@ -4,7 +4,7 @@ class Money {
 
 extension Money: Equatable {
     static func == (lhs: Money, rhs: Money) -> Bool {
-        lhs.amount == rhs.amount
+        lhs.amount == rhs.amount && type(of: lhs) == type(of: rhs)
     }
 }
 
