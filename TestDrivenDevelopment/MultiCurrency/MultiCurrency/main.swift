@@ -1,7 +1,16 @@
-struct Dollar {
-    private var amount = 0
-    
+class Money {
+    fileprivate var amount = 0
+}
+
+extension Money: Equatable {
+    static func == (lhs: Money, rhs: Money) -> Bool {
+        lhs.amount == rhs.amount
+    }
+}
+
+final class Dollar: Money {
     init(_ amount: Int) {
+        super.init()
         self.amount = amount
     }
     
@@ -10,12 +19,9 @@ struct Dollar {
     }
 }
 
-extension Dollar: Equatable {}
-
-struct Franc {
-    private var amount = 0
-    
+final class Franc: Money {
     init(_ amount: Int) {
+        super.init()
         self.amount = amount
     }
     
@@ -23,5 +29,3 @@ struct Franc {
         Franc(amount * multiplier)
     }
 }
-
-extension Franc: Equatable {}

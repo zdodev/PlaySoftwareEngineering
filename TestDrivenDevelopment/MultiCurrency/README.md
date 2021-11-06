@@ -87,5 +87,25 @@
 - 설상가상으로 모델 코드까지 도매금으로 복사하고 수정해서 테스트를 통과했다.
 - 중복이 사라지기 전에는 집에 가지 않겠다고 약속했다.
 
+## Step 6 Equality for All, Redux
+
+> - $5 + 10CHF = $10(환율이 2:1일 경우)
+> - ~~$5 x 2  = $10~~
+> - ~~amount를 private으로 만들기~~
+> - ~~Dollar 부작용?~~
+> - Money 반올림?
+> - ~~equals()~~
+> - hashCode()
+> - Equal null
+> - Equal object
+> - ~~5CHF X 2 = 10CHF~~
+> - Dollar/Franc 중복
+> - **공용 equals**
+> - 공용 times
+
+- 공통된 코드를 첫 번째 클래스(Dollar)에서 상위 클래스(Money)로 단계적으로 옮겼다.
+- 두 번째 클래스(Franc)도 Money의 하위 클래스로 만들었다.
+- 불필요한 구현을 제거하기 전에 두 equals() 구현을 일치시켰다.
+
 ---
 
