@@ -1,5 +1,17 @@
 class Money {
     fileprivate var amount = 0
+    
+    func times(_ multiplier: Int) -> Money {
+        Money()
+    }
+    
+    static func dollar(_ amount: Int) -> Money {
+        Dollar(amount)
+    }
+    
+    static func franc(_ amount: Int) -> Money {
+        Franc(amount)
+    }
 }
 
 extension Money: Equatable {
@@ -14,7 +26,7 @@ final class Dollar: Money {
         self.amount = amount
     }
     
-    func times(_ multiplier: Int) -> Dollar {
+    override func times(_ multiplier: Int) -> Money {
         Dollar(amount * multiplier)
     }
 }
@@ -25,7 +37,7 @@ final class Franc: Money {
         self.amount = amount
     }
     
-    func times(_ multiplier: Int) -> Franc {
+    override func times(_ multiplier: Int) -> Money {
         Franc(amount * multiplier)
     }
 }
