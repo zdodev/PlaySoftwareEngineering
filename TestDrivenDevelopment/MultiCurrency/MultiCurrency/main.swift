@@ -8,7 +8,7 @@ class Money {
     }
     
     func times(_ multiplier: Int) -> Money {
-        Money(0, "")
+        Money(amount * multiplier, currencyName)
     }
     
     static func dollar(_ amount: Int) -> Money {
@@ -26,7 +26,7 @@ class Money {
 
 extension Money: Equatable {
     static func == (lhs: Money, rhs: Money) -> Bool {
-        lhs.amount == rhs.amount && type(of: lhs) == type(of: rhs)
+        lhs.amount == rhs.amount && lhs.currencyName == rhs.currencyName
     }
 }
 
@@ -34,18 +34,10 @@ final class Dollar: Money {
     override init(_ amount: Int, _ currency: String) {
         super.init(amount, currency)
     }
-    
-    override func times(_ multiplier: Int) -> Money {
-        Money.dollar(amount * multiplier)
-    }
 }
 
 final class Franc: Money {
     override init(_ amount: Int, _ currency: String) {
         super.init(amount, currency)
-    }
-    
-    override func times(_ multiplier: Int) -> Money {
-        Money.franc(amount * multiplier)
     }
 }
