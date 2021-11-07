@@ -1,8 +1,8 @@
 protocol Expression {
-    
+    func reduce(_ to: String) -> Money
 }
 
-final class Money {
+struct Money {
     fileprivate var amount = 0
     fileprivate var currencyName = ""
     
@@ -28,7 +28,11 @@ final class Money {
     }
     
     func plus(_ addend: Money) -> Expression {
-        Money(amount + addend.amount, currencyName)
+        Sum(self, addend)
+    }
+    
+    func reduce(_ to: String) -> Money {
+        self
     }
 }
 
@@ -44,6 +48,25 @@ extension Money: Expression {
 
 struct Bank {
     func reduce(_ source: Expression, _ to: String) -> Money {
-        Money.dollar(10)
+        return source.reduce(to)
     }
+}
+
+struct Sum {
+    let augend: Money
+    let addend: Money
+    
+    init(_ augend: Money, _ addend: Money) {
+        self.augend = augend
+        self.addend = addend
+    }
+    
+    func reduce(_ to: String) -> Money {
+        let amount = augend.amount + addend.amount
+        return Money(amount, to)
+    }
+}
+
+extension Sum: Expression {
+    
 }
