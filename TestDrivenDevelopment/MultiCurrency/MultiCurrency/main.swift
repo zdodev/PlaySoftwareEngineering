@@ -12,11 +12,11 @@ class Money {
     }
     
     static func dollar(_ amount: Int) -> Money {
-        Dollar(amount, "USD")
+        Money(amount, "USD")
     }
     
     static func franc(_ amount: Int) -> Money {
-        Franc(amount, "CHF")
+        Money(amount, "CHF")
     }
     
     func currency() -> String {
@@ -27,17 +27,5 @@ class Money {
 extension Money: Equatable {
     static func == (lhs: Money, rhs: Money) -> Bool {
         lhs.amount == rhs.amount && lhs.currencyName == rhs.currencyName
-    }
-}
-
-final class Dollar: Money {
-    override init(_ amount: Int, _ currency: String) {
-        super.init(amount, currency)
-    }
-}
-
-final class Franc: Money {
-    override init(_ amount: Int, _ currency: String) {
-        super.init(amount, currency)
     }
 }
