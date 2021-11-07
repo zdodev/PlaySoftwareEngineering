@@ -1,4 +1,8 @@
-class Money {
+protocol Expression {
+    
+}
+
+final class Money {
     fileprivate var amount = 0
     fileprivate var currencyName = ""
     
@@ -22,10 +26,24 @@ class Money {
     func currency() -> String {
         currencyName
     }
+    
+    func plus(_ addend: Money) -> Expression {
+        Money(amount + addend.amount, currencyName)
+    }
 }
 
 extension Money: Equatable {
     static func == (lhs: Money, rhs: Money) -> Bool {
         lhs.amount == rhs.amount && lhs.currencyName == rhs.currencyName
+    }
+}
+
+extension Money: Expression {
+    
+}
+
+struct Bank {
+    func reduce(_ source: Expression, _ to: String) -> Money {
+        Money.dollar(10)
     }
 }
