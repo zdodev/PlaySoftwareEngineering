@@ -54,6 +54,26 @@ final class Box<T> {
 }
 ```
 
+-   Protocol: 프로토콜을 활용한 바인딩 방법입니다.
+
+```swift
+protocol ViewModelBindableType {
+    associatedtype ViewModelType
+    
+    var viewModel: ViewModelType! { get set }
+    func bindViewMode()
+}
+
+extension ViewModelBindableType where Self: UIViewController {
+    mutating func bind(viewModel: Self.ViewModelType) {
+        self.viewModel = viewModel
+        loadViewIfNeeded()
+        
+        bindViewModel()
+    }
+}
+```
+
 
 
 ## MVVM-1
