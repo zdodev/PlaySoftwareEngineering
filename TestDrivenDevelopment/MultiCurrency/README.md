@@ -340,5 +340,36 @@
 - 좀더 추상적인 선언을 통해 가지에서 부리(애초의 테스트 케이스)로 일반화했다.
 - 변경 후 (Expression fiveBucks), 그 영향을 받은 다른 부분들을 변경하기 위해 컴파일러의 지시를 따랐다(Expression에 plus()를 추가하기 등등).
 
+## Step 16 Abstraction, Finally
+
+> - ~~$5 + 10CHF = $10(환율이 2:1일 경우)~~
+> - ~~$5 + $5 = $10~~
+> - **$5 + $5에서 Money 반환하기**
+> - ~~Bank.reduce(Money)~~
+> - ~~Money에 대한 통화 변환을 수행하는 Reduce~~
+> - ~~Reduce(Bank, String)~~
+> - ~~Sum.plus~~
+> - Expression.times
+> - ~~$5 x 2  = $10~~
+> - ~~amount를 private으로 만들기~~
+> - ~~Dollar 부작용?~~
+> - Money 반올림?
+> - ~~equals()~~
+> - hashCode()
+> - Equal null
+> - Equal object
+> - ~~5CHF X 2 = 10CHF~~
+> - ~~Dollar/Franc 중복~~
+> - ~~공용 equals~~
+> - ~~공용 times~~
+> - ~~Franc와 Dollar 비교하기~~
+> - ~~통화?~~
+> - ~~testFrancMultiplication 제거~~
+
+- 미래에 코드를 읽을 다른 사람들을 염두에 둔 테스트를 작성했다.
+- TDD와 여러분의 현재 개발 스타일을 비교해 볼 수 있는 실험 방법을 제시했다.
+- 또 한 번 선언부에 대한 수정이 시스템 나머지 부분으로 번져갔고, 문제를 고치기 위해 역시 컴파일러의 조언을 따랐다.
+- 잠시 실험을 시도했는데, 제대로 되지 않아서 버렸다.
+
 ---
 

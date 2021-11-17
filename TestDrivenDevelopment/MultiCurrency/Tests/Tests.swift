@@ -66,4 +66,31 @@ class Tests: XCTestCase {
         let result = bank.reduce(fiveBucks.plus(tenFrancs), "USD")
         XCTAssertEqual(Money.dollar(10), result)
     }
+    
+    func test_sum_plus_money() {
+        let fiveBucks = Money.dollar(5)
+        let tenFrancs = Money.franc(10)
+        var bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+        let sum = Sum(fiveBucks, tenFrancs).plus(fiveBucks)
+        let result = bank.reduce(sum, "USD")
+        XCTAssertEqual(Money.dollar(15), result)
+    }
+    
+    func test_sum_times() {
+        let fiveBucks = Money.dollar(5)
+        let tenFrances = Money.franc(10)
+        var bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+        let sum = Sum(fiveBucks, tenFrances).times(2)
+        let result = bank.reduce(sum, "USD")
+        XCTAssertEqual(Money.dollar(20), result)
+    }
+    
+    func test_plus_same_currency_returns_money() {
+        let sum = Money.dollar(1).plus(Money.dollar(1))
+//        XCTAssertTrue(type(of: sum) is Money)
+        print(sum as! Money)
+        
+    }
 }
