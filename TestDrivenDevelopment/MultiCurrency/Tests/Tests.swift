@@ -3,8 +3,8 @@ import XCTest
 class Tests: XCTestCase {
     func test_multiplication() {
         let five = Money.dollar(5)
-        XCTAssertEqual(Money.dollar(10), five.times(2))
-        XCTAssertEqual(Money.dollar(15), five.times(3))
+        XCTAssertEqual(Money.dollar(10), five.times(2) as! Money)
+        XCTAssertEqual(Money.dollar(15), five.times(3) as! Money)
     }
     
     func test_equality() {
@@ -30,8 +30,8 @@ class Tests: XCTestCase {
         let five = Money.dollar(5)
         let result = five.plus(five)
         let sum: Sum = result as! Sum
-        XCTAssertEqual(five, sum.augend)
-        XCTAssertEqual(five, sum.addend)
+        XCTAssertEqual(five, sum.augend as! Money)
+        XCTAssertEqual(five, sum.addend as! Money)
     }
     
     func test_reduce_sum() {
@@ -56,5 +56,14 @@ class Tests: XCTestCase {
     
     func test_identity_rate() {
         XCTAssertEqual(1, Bank().rate("USD", "USD"))
+    }
+    
+    func test_mixed_addition() {
+        let fiveBucks: Expression = Money.dollar(5)
+        let tenFrancs: Expression = Money.franc(10)
+        var bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+        let result = bank.reduce(fiveBucks.plus(tenFrancs), "USD")
+        XCTAssertEqual(Money.dollar(10), result)
     }
 }

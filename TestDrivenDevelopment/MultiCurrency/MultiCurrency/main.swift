@@ -1,5 +1,6 @@
 protocol Expression {
     func reduce(_ bank: Bank, _ to: String) -> Money
+    func plus(_ addend: Expression) -> Expression
 }
 
 struct Money {
@@ -11,7 +12,7 @@ struct Money {
         self.currencyName = currency
     }
     
-    func times(_ multiplier: Int) -> Money {
+    func times(_ multiplier: Int) -> Expression {
         Money(amount * multiplier, currencyName)
     }
     
@@ -27,7 +28,7 @@ struct Money {
         currencyName
     }
     
-    func plus(_ addend: Money) -> Expression {
+    func plus(_ addend: Expression) -> Expression {
         Sum(self, addend)
     }
     
@@ -81,20 +82,23 @@ struct Bank {
 }
 
 struct Sum {
-    let augend: Money
-    let addend: Money
+    let augend: Expression
+    let addend: Expression
     
-    init(_ augend: Money, _ addend: Money) {
+    init(_ augend: Expression, _ addend: Expression) {
         self.augend = augend
         self.addend = addend
     }
     
     func reduce(_ bank: Bank, _ to: String) -> Money {
-        let amount = augend.amount + addend.amount
+//        let amount = augend.amount + addend.amount
+        let amount = augend.reduce(bank, to).amount + addend.reduce(bank, to).amount
         return Money(amount, to)
     }
 }
 
 extension Sum: Expression {
-    
+    func plus(_ addend: Expression) -> Expression {
+        addend
+    }
 }
