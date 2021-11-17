@@ -46,4 +46,15 @@ class Tests: XCTestCase {
         let result = bank.reduce(Money.dollar(1), "USD")
         XCTAssertEqual(Money.dollar(1), result)
     }
+    
+    func test_reduce_money_different_currency() {
+        var bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+        let result = bank.reduce(Money.franc(2), "USD")
+        XCTAssertEqual(Money.dollar(1), result)
+    }
+    
+    func test_identity_rate() {
+        XCTAssertEqual(1, Bank().rate("USD", "USD"))
+    }
 }
