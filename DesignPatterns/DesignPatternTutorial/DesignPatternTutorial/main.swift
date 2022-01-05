@@ -1,11 +1,10 @@
-//
-//  main.swift
-//  DesignPatternTutorial
-//
-//  Created by admin on 2022/01/05.
-//
+struct Main {
+    func observer() {
+        let observerInstance = Observer()
+        let testChambers = TestChambers(observer: observerInstance)
+        testChambers.testChamberNumber += 1
+    }
+}
 
-import Foundation
-
-print("Hello, World!")
-
+let main = Main()
+main.observer()
