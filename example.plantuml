@@ -1,0 +1,71 @@
+@startuml
+
+package Domain {
+    package Entities {
+        entity Movie
+        entity MoviesPage
+        entity MovieQuery
+    }
+
+    Movie <-- MoviesPage
+
+    package UseCases {
+        interface SearchMoviesUseCase
+        interface UseCase
+
+        entity SearchMoviesUseCaseRequestValue
+
+        class DefaultSearchMoviesUseCase
+        class FetchRecentMovieQueriesUseCase
+    }
+
+    package Interfaces {
+        interface MoviesRepository
+        interface MoviesQueriesRepository
+        interface PosterImagesRepository
+    }
+
+    SearchMoviesUseCaseRequestValue <-- SearchMoviesUseCase
+    MoviesPage <-- SearchMoviesUseCase
+    Cancellable <-- SearchMoviesUseCase
+
+    MovieQuery <-- SearchMoviesUseCaseRequestValue
+
+    SearchMoviesUseCase <|.. DefaultSearchMoviesUseCase
+    MoviesRepository <-- DefaultSearchMoviesUseCase
+    MoviesQueriesRepository <-- DefaultSearchMoviesUseCase
+
+    UseCase <|.. FetchRecentMovieQueriesUseCase
+    MovieQuery <-- FetchRecentMovieQueriesUseCase
+    MoviesQueriesRepository <-- FetchRecentMovieQueriesUseCase
+
+    MovieQuery <-- MoviesRepository
+    MoviesPage <-- MoviesRepository
+    Cancellable <-- MoviesRepository
+
+    MovieQuery <-- MoviesQueriesRepository
+}
+
+package Presentation {
+    package MoviesScene {
+        package Flows {
+            interface MoviesSearchFlowCoordinatorDependencies
+
+            MoviesListViewModelActions <-- MoviesSearchFlowCoordinatorDependencies
+            MoviesListViewController <-- MoviesSearchFlowCoordinatorDependencies
+            Movie <-- MoviesSearchFlowCoordinatorDependencies
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+interface Cancellable
+
+@enduml
