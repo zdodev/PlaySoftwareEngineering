@@ -17,6 +17,8 @@
 		84D2A06227BB90680034AF0F /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A06127BB90680034AF0F /* ExampleUITests.swift */; };
 		84D2A06427BB90680034AF0F /* ExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A06327BB90680034AF0F /* ExampleUITestsLaunchTests.swift */; };
 		84D2A07427BB90BD0034AF0F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A07327BB90BD0034AF0F /* Movie.swift */; };
+		84D6C46927BDF3D900BEBD36 /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6C46827BDF3D900BEBD36 /* Counting.swift */; };
+		84D6C46B27BDF45E00BEBD36 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6C46A27BDF45E00BEBD36 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		84D2A06127BB90680034AF0F /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		84D2A06327BB90680034AF0F /* ExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84D2A07327BB90BD0034AF0F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		84D6C46827BDF3D900BEBD36 /* Counting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counting.swift; sourceTree = "<group>"; };
+		84D6C46A27BDF45E00BEBD36 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				84D2A07127BB90A20034AF0F /* Domain */,
+				84D2A04427BB90650034AF0F /* ViewController.swift */,
+				84D6C46A27BDF45E00BEBD36 /* ViewModel.swift */,
+				84D6C46827BDF3D900BEBD36 /* Counting.swift */,
+				84D2A04E27BB90670034AF0F /* Info.plist */,
 				84D2A07027BB90930034AF0F /* Supporting Files */,
 			);
 			path = Example;
@@ -129,11 +137,9 @@
 			children = (
 				84D2A04027BB90650034AF0F /* AppDelegate.swift */,
 				84D2A04227BB90650034AF0F /* SceneDelegate.swift */,
-				84D2A04427BB90650034AF0F /* ViewController.swift */,
 				84D2A04627BB90650034AF0F /* Main.storyboard */,
 				84D2A04927BB90670034AF0F /* Assets.xcassets */,
 				84D2A04B27BB90670034AF0F /* LaunchScreen.storyboard */,
-				84D2A04E27BB90670034AF0F /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -287,7 +293,9 @@
 			files = (
 				84D2A04527BB90650034AF0F /* ViewController.swift in Sources */,
 				84D2A04127BB90650034AF0F /* AppDelegate.swift in Sources */,
+				84D6C46927BDF3D900BEBD36 /* Counting.swift in Sources */,
 				84D2A07427BB90BD0034AF0F /* Movie.swift in Sources */,
+				84D6C46B27BDF45E00BEBD36 /* ViewModel.swift in Sources */,
 				84D2A04327BB90650034AF0F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
