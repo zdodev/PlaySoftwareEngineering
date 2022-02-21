@@ -15,9 +15,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVG-iC-1hX">
+                                <rect key="frame" x="192" y="437.5" width="30" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="4Hf-d5-6Ac"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-cm-kpk">
+                                <rect key="frame" x="58.5" y="432.5" width="83.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="decrease"/>
+                                <connections>
+                                    <action selector="tappedDecreaseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fA-TR-ceL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3M-g4-3xf">
+                                <rect key="frame" x="272" y="432.5" width="79" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Increase"/>
+                                <connections>
+                                    <action selector="tappedIncreaseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JmG-xt-a3o"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zVG-iC-1hX" firstAttribute="leading" secondItem="Rdf-cm-kpk" secondAttribute="trailing" constant="50" id="4a1-Zn-LVT"/>
+                            <constraint firstItem="n3M-g4-3xf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A3G-ZW-LBJ"/>
+                            <constraint firstItem="n3M-g4-3xf" firstAttribute="leading" secondItem="zVG-iC-1hX" secondAttribute="trailing" constant="50" id="UOI-Qq-m4Y"/>
+                            <constraint firstItem="Rdf-cm-kpk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qzJ-Yn-STZ"/>
+                            <constraint firstItem="zVG-iC-1hX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tLZ-df-ggJ"/>
+                            <constraint firstItem="zVG-iC-1hX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="z62-RH-xgx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IncreaseButton" destination="n3M-g4-3xf" id="e26-tG-VWt"/>
+                        <outlet property="numberLabel" destination="zVG-iC-1hX" id="XFe-0p-pB9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
